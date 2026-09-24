@@ -159,7 +159,7 @@ body:not([data-screen="home"]) .foot { display: none; }
 /* ---- 入力のようす ---- */
 .progress { margin: 16px 0 8px; font-size: 14px; }
 .progress b { font-size: 20px; color: var(--accent); }
-.people { display: grid; gap: 6px; }
+.people { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; }
 .person {
   width: 100%;
   display: flex;
@@ -173,7 +173,7 @@ body:not([data-screen="home"]) .foot { display: none; }
   background: var(--surface);
   text-align: left;
 }
-.person__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.person__name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .actions { margin-top: 16px; }
 
 /* ---- 手渡し・目かくし ---- */
