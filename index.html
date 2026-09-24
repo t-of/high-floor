@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1418">
+  <meta name="description" content="部屋割りや係決めで、みんなが持ち点 100 点を行きたい先に配って、1 台の端末を回して入れる。一番点の低い人ができるだけ高くなる組み合わせを、端末の中だけで計算して出す。">
+  <title>HIGH FLOOR — 一番損する人を出さない割り当て</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HIGH FLOOR">
+  <meta property="og:title" content="HIGH FLOOR — 一番損する人を出さない割り当て">
+  <meta property="og:description" content="部屋割りや係決めで、みんなが持ち点 100 点を行きたい先に配って、1 台の端末を回して入れる。一番点の低い人ができるだけ高くなる組み合わせを、端末の中だけで計算して出す。">
+  <meta property="og:url" content="https://t-of.github.io/high-floor/">
+  <meta property="og:image" content="https://t-of.github.io/high-floor/icons/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- apple-mobile-web-app-status-bar-style は付けない（black-translucent だと iOS 26 で上部が隠れる） -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="HIGH FLOOR">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="./webapp-kit/webapp-kit.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-screen="home">
+  <main class="app">
+    <header class="bar">
+      <button class="back" data-act="back" aria-label="もどる">‹ もどる</button>
+      <h1 class="bar__title" id="bar-title">HIGH FLOOR</h1>
+    </header>
+
+    <section class="stage" id="stage"></section>
+
+    <footer class="foot" id="foot">
+      <div class="foot__row">
+        <button class="pill" data-wak="share">共有</button>
+        <button class="pill" data-wak="install" hidden>アプリにする</button>
+        <button class="pill" data-act="sound" id="sound-btn" aria-pressed="true">音 オン</button>
+      </div>
+      <p class="credit"><a href="/">T.OF...</a> のアプリ</p>
+    </footer>
+  </main>
+
+  <div class="sheet" id="sheet" hidden>
+    <div class="sheet__box" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <h2 class="sheet__title" id="sheet-title"></h2>
+      <p class="sheet__text" id="sheet-text"></p>
+      <div class="sheet__btns" id="sheet-btns"></div>
+    </div>
+  </div>
+
+  <script src="./webapp-kit/webapp-kit.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
